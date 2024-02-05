@@ -1,10 +1,10 @@
 import gql from 'graphql-tag'
 
 export const getCourseSchema = gql`
-  """
-  Query responsible for getting a course.
-  """
   extend type Query {
+    """
+    Query responsible for getting a course.
+    """
     getCourse(courseId: String!): Course
   }
 `

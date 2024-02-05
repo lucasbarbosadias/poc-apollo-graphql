@@ -13,10 +13,10 @@ export const listCoursesSchema = gql`
     hasMore: Boolean
   }
 
-  """
-  Query responsible for listing courses.
-  """
   extend type Query {
+    """
+    Query responsible for listing courses.
+    """
     listCourses(params: ListCoursesParams): ListCoursesResponse
   }
 `

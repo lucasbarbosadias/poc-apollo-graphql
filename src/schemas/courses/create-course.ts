@@ -8,10 +8,10 @@ export const createCourseSchema = gql`
     price: Float!
   }
 
-  """
-  Query responsible for creating a new course.
-  """
   extend type Mutation {
-    createCourse(input: CreateCourseInput): Coursee
+    """
+    Query responsible for creating a new course.
+    """
+    createCourse(input: CreateCourseInput): Course
   }
 `
