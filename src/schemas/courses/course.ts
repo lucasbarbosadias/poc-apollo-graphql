@@ -5,7 +5,7 @@ export const courseSchema = gql`
     id: String!
     name: String!
     description: String
-    duration: Int!
+    hours: Int!
     price: Float!
   }
 `

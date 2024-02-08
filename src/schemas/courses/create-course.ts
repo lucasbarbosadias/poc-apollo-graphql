@@ -4,7 +4,7 @@ export const createCourseSchema = gql`
   input CreateCourseInput {
     name: String!
     description: String
-    duration: Int!
+    hours: Int!
     price: Float!
   }
 

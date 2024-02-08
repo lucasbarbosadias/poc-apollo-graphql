@@ -3,9 +3,7 @@ import gql from 'graphql-tag'
 export const listCoursesSchema = gql`
   input ListCoursesParams {
     limit: Int
-    name: String
-    duration: String
-    price: String
+    hours: Int
   }
 
   type ListCoursesResponse {

@@ -1,12 +1,16 @@
-import { GetCourseResolver } from './courses'
+import { GetCourseResolver, ListCoursesResolver } from './courses'
 
 export const resolvers = {
   Query: {
-    // get a single course by ID
     getCourse: (_, { courseId }, { dataSources }) => {
       const getCourseResolver = new GetCourseResolver()
 
       return getCourseResolver.execute({ courseId, dataSources })
+    },
+    listCourses: (_, { params }, { dataSources }) => {
+      const listCoursesResolver = new ListCoursesResolver()
+
+      return listCoursesResolver.execute({ params, dataSources })
     },
   },
   Mutation: {},

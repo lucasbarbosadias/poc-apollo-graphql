@@ -2,6 +2,16 @@ export interface Course {
   id: string
   name: string
   description?: string
-  duration: number
+  hours: number
   price: number
+}
+
+export interface ListCoursesParams {
+  limit?: number
+  hours?: number
+}
+
+export interface ListCoursesResponse {
+  data: Course[]
+  hasMore: boolean
 }
