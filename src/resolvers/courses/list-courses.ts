@@ -13,7 +13,7 @@ export class ListCoursesResolver {
 
     console.log('ListCoursesResolver courses returned: ', courses.data.length)
 
-    if (!courses.data) {
+    if (!courses.data.length) {
       return {
         data: [],
         hasMore: false,
