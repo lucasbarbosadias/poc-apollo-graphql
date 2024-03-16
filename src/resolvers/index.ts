@@ -1,4 +1,8 @@
-import { GetCourseResolver, ListCoursesResolver } from './courses'
+import {
+  GetCourseResolver,
+  ListCoursesResolver,
+  CreateCourseResolver,
+} from './courses'
 
 export const resolvers = {
   Query: {
@@ -13,5 +17,11 @@ export const resolvers = {
       return listCoursesResolver.execute({ params, dataSources })
     },
   },
-  Mutation: {},
+  Mutation: {
+    createCourse: (_, { input }, { dataSources }) => {
+      const createCourseResolver = new CreateCourseResolver()
+
+      return createCourseResolver.execute({ input, dataSources })
+    }
+  },
 }

@@ -1,4 +1,6 @@
-export const coursesMock = [
+import { Course } from "../protocols/course";
+
+export const coursesMock: Course[] = [
   {
     id: '01',
     name: 'NodeJs',

@@ -15,3 +15,10 @@ export interface ListCoursesResponse {
   data: Course[]
   hasMore: boolean
 }
+
+export interface CreateCourseInput {
+  name: string
+  description?: string
+  hours: number
+  price: number
+}

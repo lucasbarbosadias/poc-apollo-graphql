@@ -1,4 +1,4 @@
-import { Course, ListCoursesParams } from "../protocols/course";
+import { Course, ListCoursesParams, CreateCourseInput } from "../protocols/course";
 import { coursesMock } from "./courses-mock";
 
 export class CourseAPI {
@@ -42,6 +42,20 @@ export class CourseAPI {
     if (limit) {
       return this.filterCourses(coursesMock, limit)
     }
+
+    return response
+  }
+
+  createCourse(input: CreateCourseInput) {
+    console.log('Rest createCourse input: ', input)
+
+    const response = {
+      ...input,
+      id: '05'
+    }
+    coursesMock.push(response)
+
+    console.log('all courses: ', coursesMock)
 
     return response
   }
